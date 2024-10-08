@@ -1,0 +1,507 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: rgb(252, 249, 248);
+  background-color: #111;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: auto;
+  font-weight: bold;
+  color: #ff4500;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #ff4500;
+}
+
+/* Section Styling */
+section {
+  padding: 100px 50px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section-bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  background-repeat: no-repeat;
+}
+
+h1, h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Makes text pop */
+}
+
+p {
+  font-size: 18px;
+  max-width: 600px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#about, #services, #team, #testimonials, #clients, #location, #career, #contact, #social-media {
+  background-color: #2c2c2c;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #f74606;
+}
+
+.team-container {
+  display: flex;
+  gap: 20px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.team-member {
+  text-align: center;
+}
+
+
+/* Background Images */
+#home {
+  background-image: url('image/home.jpg');
+}
+
+#about {
+  background-image: url('image/about.jpg');
+}
+
+#mission {
+  background-image: url('image/mission.jpg');
+}
+
+#vision {
+  background-image: url('image/vision.jpg');
+}
+
+#services {
+  background-image: url('image/services.jpg');
+}
+
+#team {
+  background-image: url('image/team.jpg');
+}
+
+#clients {
+  background: url('image/clients.jpg');
+}
+
+#career {
+  background-image: url('image/career.jpg');
+}
+
+#contact {
+  background-image: url('image/contact.jpg');
+}
+
+/* Services Section with Background Image */
+.services-section {
+  height: auto;
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+  color: rgb(240, 240, 240);
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+}
+
+.services-content {
+  position: relative;
+  z-index: 1;
+}
+
+.services-content h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #ff4500;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: left;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #b9ada8; /* Service heading color */
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .service-item {
+      width: 100%;
+      max-width: 500px;
+  }
+}
+
+/* Form Styles */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff4500;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Client Section with Background Image and Animation */
+.clients-section {
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.clients-content h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #ff4500;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.client-item img {
+  width: 150px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.client-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 80px 20px;
+  background: url('image/testimonials.jpg') no-repeat center center/cover;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  z-index: 0;
+}
+
+.testimonials-content {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards ease-in-out;
+}
+
+.testimonial-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  color: #fff;
+}
+
+.testimonial-item p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.testimonial-item h3 {
+  font-size: 1.5rem;
+  color: #f39c12;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Testimonials Slider */
+.testimonial-slider {
+  animation: slide 10s infinite;
+}
+
+@keyframes slide {
+  0%, 33% { transform: translateX(0); }
+  33.33%, 66% { transform: translateX(-100%); }
+  66.33%, 100% { transform: translateX(-200%); }
+}
+
+/* Career Section */
+.career-section {
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.career-content h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.career-content p {
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+.job-listings {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.job-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.job-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.job-item p {
+  font-size: 1rem;
+  color: #ccc
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 20px;
+
+  position: relative;
+  color: white;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.contact-info h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.social-media a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-media a img:hover {
+  transform: scale(1.2);
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.contact-form h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.btn-submit {
+  background-color: #f39c12;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #e67e22;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-content {
+      flex-direction: column;
+  }
+  
+  .contact-info,
+  .contact-form {
+      padding: 0; /* Reset padding for smaller screens */
+      margin-bottom: 20px; /* Add spacing between sections */
+  }
+}
+
+/* Social Media Footer */
+.social-media {
+  padding: 20px;
+  text-align: center;
+}
+
+.social-media img {
+  height: 40px;
+  width: auto;
+  margin: 0 10px;
+}
+

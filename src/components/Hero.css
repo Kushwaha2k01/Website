@@ -1,0 +1,33 @@
+.hero {
+    height: 100vh;
+    background-image: url(https://unsplash.com/photos/closeup-of-white-sony-ps4-controller-HUBNTCzE-R8); /* Ensure you have a background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .hero button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff4500;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
